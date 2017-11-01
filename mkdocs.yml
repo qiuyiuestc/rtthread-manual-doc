@@ -26,19 +26,17 @@ pages:
 - 主页: 'index.md'
 
 - 教程:
-  - 'RT-Thread介绍': 
-    - 'RT-Thread简介': 'zh/1chapters/01-chapter_introduction.md'
-    - 'RT-Thread许可证' : 'docs/tutorials/license.md'
   - 入门教程:
     - 'RT-Thread新手入门': 'docs/tutorials/quickstart.md'
     - 'RT-Thread编程风格': 'docs/tutorials/codingstyle.md'
-    - 'RT-Thread代码贡献': 'zh/9appendix/03_github.md'
+    - 'RT-Thread许可证' : 'docs/tutorials/license.md'    
+    - '为RT-Thread贡献代码': 'zh/9appendix/03_github.md'
   - 进阶教程:
     - 'RT-Thread进阶': 'docs/tutorials/advanced.md'
-    - '配置选项参考说明': 'zh/1chapters/02-chapter_thread.md'
-  - 高级教程:
-    - 'RT-Thread高级': 'docs/tutorials/senior.md'
-    - 'SCons构建系统': 'zh/1chapters/10-chapter_scons.md'    
+    - '配置选项参考说明': 'docs/tutorials/rtconfig.md'
+#  - 高级教程:
+#    - 'RT-Thread高级': 'docs/tutorials/senior.md'
+#    - 'SCons构建系统': 'zh/1chapters/10-chapter_scons.md'
     
 #- 入门指南:
 #  - 'RT-Thread/ESP32': 'zh/4chapters/quickstart_esp32.md'
@@ -61,34 +59,34 @@ pages:
     - 'lwIP-IPv6 支持': 'zh/1chapters/14-chapter_ipv6.md'
     - 'POSIX接口': 'zh/1chapters/15-chapter_posix.md'
   - 'RT-Thread API手册': 'zh/1chapters/07-chapter_exception.md'
-  - 'RT-Thread组件手册':
-    - '图像用户界面引擎': 'zh/1chapters/16-chapter_gui_engine.md'
-  - 'RT-Thread设备和驱动手册': 'zh/1chapters/07-chapter_exception.md'  
-  - 'RT-Thread移植手册':
-    - '移植': 'zh/1chapters/09-chapter_porting.md'
-  - 'RT-Thread工具手册':
-    - 'ENV工具手册': 'zh/1chapters/09-chapter_porting.md'
+#  - 'RT-Thread组件手册':
+#    - '图像用户界面引擎': 'zh/1chapters/16-chapter_gui_engine.md'
+#  - 'RT-Thread设备和驱动手册': 'zh/1chapters/07-chapter_exception.md'  
+#  - 'RT-Thread移植手册':
+#    - '移植': 'zh/1chapters/09-chapter_porting.md'
+#  - 'RT-Thread工具手册':
+#    - 'ENV工具手册': 'zh/1chapters/09-chapter_porting.md'
 
 - 应用笔记:
-  - 移植说明:
-    - 'Risc-V架构芯片移植说明': 'zh/1chapters/02-chapter_thread.md'
-    - 'C-SKY架构芯片移植说明': 'zh/1chapters/02-chapter_thread.md'
+#  - 移植说明:
+#    - 'Risc-V架构芯片移植说明': 'docs/applicationnote/risc-v.md'
+#    - 'C-SKY架构芯片移植说明': 'docs/applicationnote/c-sky.md'
   - 开发板说明:
-    - '[正点原子板]Nano入门环境搭建': 'zh/1chapters/02-chapter_thread.md'
-    - '[正点原子板]IoT进阶环境搭建': 'docs/applicationnote/apollo_advanced.md'
-    - '[正点原子板]RT-Thread实验手册': 'zh/1chapters/02-chapter_thread.md'
-    - '[QEMU模拟器]IoT进阶环境搭建': 'zh/1chapters/02-chapter_thread.md'
-  - 学习笔记:
-    - 'Systemview': 'zh/1chapters/02-chapter_thread.md'
+    - '正点原子板Nano入门环境搭建': 'docs/applicationnote/apollo_nano_start.md'
+    - '正点原子板IoT进阶环境搭建': 'docs/applicationnote/apollo_advanced.md'
+#    - '[正点原子板]RT-Thread实验手册': 'docs/applicationnote/rtt_experiment.md'
+#    - '[QEMU模拟器]IoT进阶环境搭建': 'docs/applicationnote/qemu_iot_advanced.md'
+#  - 学习笔记:
+#    - '搭建Systemview调试环境': 'docs/applicationnote/systemview.md'
 
-- 示例:
-  - 'RT-Thread内核示例': 'zh/1chapters/08-chapter_application.md'
-  - 'RT-Thread组件示例': 'zh/1chapters/08-chapter_application.md'
-  - 'RT-Thread设备和驱动示例': 'zh/1chapters/16-chapter_gui_engine.md'
+#- 示例:
+#  - 'RT-Thread内核示例': 'zh/1chapters/08-chapter_application.md'
+#  - 'RT-Thread组件示例': 'zh/1chapters/08-chapter_application.md'
+#  - 'RT-Thread设备和驱动示例': 'zh/1chapters/16-chapter_gui_engine.md'
 
 - 发布说明:
-  - 'RT-Thread Nano发布说明': 'zh/1chapters/16-chapter_gui_engine.md'
-  - 'RT-Thread IoT发布说明': 'zh/1chapters/16-chapter_gui_engine.md'
+  - 'RT-Thread Nano发布说明': 'docs/releasenotes/nano_release.md'
+#  - 'RT-Thread IoT 3.0发布说明': 'docs/releasenotes/iot3_release.md'
 #- 设备驱动:
 #  - '字符设备': 'zh/2chapters/01-char-device.md'
 #  - '块设备': 'zh/2chapters/02-block-device.md'
@@ -105,5 +103,5 @@ pages:
 #  - '新架构移植': 'zh/3chapters/porting_arch.md'
 #  - 'ARM Cortex-M架构移植': 'zh/3chapters/porting_arch.md'  
 
-- 常见问题:
-  - '主页': 'zh/4chapters/README.md'
+#- 常见问题:
+#  - '主页': 'zh/4chapters/README.md'
