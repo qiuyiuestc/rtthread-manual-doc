@@ -290,7 +290,7 @@ int rtthread_startup(void)
 
 >几个函数说明如下：
 
-| Tables                        | Cool           |
+| 函数名                        | 描述           |
 |-------------------------------|----------------|
 | rt_hw_board_init()            | 板级硬件初始化 |
 | rt_system_timer_init()        | timer初始化    |
