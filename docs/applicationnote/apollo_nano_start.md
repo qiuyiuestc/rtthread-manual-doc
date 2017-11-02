@@ -1,4 +1,4 @@
-# 正点原子 Nano 入门环境搭建  #
+# 基于正点原子板的 RT-Thread Nano 入门环境搭建  #
 
 何为RT-Thread Nano?大家知道，Keil5以后采用pack形式管理芯片及各种相关组件的。RT-Thread Nano就是通过Keil pack方式发布，在保持原有RT-Thread基本功能的情况下，实现了极小的Flash和RAM占用。默认配置下，Flash可小至2.5K， RAM可以小至1K。
 
@@ -6,15 +6,15 @@
 
 本节以正点原子开发板为例，说明了如何使用Keil MDK的软件包管理工具安装RT-Thread Nano，在此基础上实现创建2个LED闪烁的静态线程的示例。
 
-## 1.准备工作
+## 1.准备工作 ##
 
 * 安装好Keil MDK软件
 * 正点原子开发板（其它的开发板类似）
 
-## 2.操作步骤
+## 2.操作步骤 ##
 
 
-#### 第一步：RT-Thread Nano Pack下载安装
+### 第一步：RT-Thread Nano Pack下载安装 ###
 
 
 
@@ -37,7 +37,7 @@
 <center>![image](../../figures/zdyz3.png)</center>
 <center>图3 Packs下载和更新</center>
 
-#### 第二步：kernel加载与应用
+### 第二步：kernel加载与应用 ###
 
 - 加载RT-Thread Kernel:在主界面点击“ManageRun-TimeEnvironment”按钮即可进入加载页。
 
@@ -88,7 +88,7 @@ rtconfig.h
 
 ```
 
-#### 第三步：修改源码适配开发板
+### 第三步：修改源码适配开发板 ###
 
 - 此时再次编译工程，编译器会提示有函数被重复定义了。需按照如下方式做一些修改：
 
@@ -225,9 +225,9 @@ void SysTick_Handler(void);
 
 [源码和文档百度网盘下载](http://pan.baidu.com/s/1sl4sWjj)
 
-## 3. RT-Thread程序执行流程分析
+## 3. RT-Thread程序执行流程分析 ##
 
-### RT-Thread入口
+### RT-Thread入口 ###
 
 我们可以在`components.c`文件的140行看到`#ifdef RT_USING_USER_MAIN`宏定义判断，这个宏是定义在`rtconfig.h`文件内的，而且处于开启状态。同时我们可以在146行看到`#if defined (__CC_ARM)`的宏定义判断，`__CC_ARM`就是指keil的交叉编译器名称。
 
@@ -290,7 +290,7 @@ int rtthread_startup(void)
 
 >几个函数说明如下：
 
-| Tables                        | Cool           |
+| 函数名                        | 描述           |
 |-------------------------------|----------------|
 | rt_hw_board_init()            | 板级硬件初始化 |
 | rt_system_timer_init()        | timer初始化    |
@@ -299,7 +299,7 @@ int rtthread_startup(void)
 | rt_application_init()         | 应用线程初始化 |
 | rt_system_scheduler_start()   | 调度器启动     |
 
-### 应用线程入口
+### 应用线程入口 ###
 
 `rt_application_init()`源码如下：
 
@@ -357,5 +357,3 @@ void main_thread_entry(void*parameter)
 
 <center> ![image](../../figures/usemain.png) </center >  
 <center> 图9 RT_USING_USER_MAIN选项 </center >
-
-

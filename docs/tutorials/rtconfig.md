@@ -1,6 +1,6 @@
 #  RT-Thread配置选项说明 #
 
-RT-thread包含一个rtconfig.h文件，该文件包含一系列宏定义，用来裁剪RT-Thread，配置内核和组件参数。RT-Thread推出了ENV工具，提供了类似Linux内核裁剪配置的图形化工具，因此一般不需要手动修改rtconfig.h文件。
+RT-Thread包含一个rtconfig.h文件，该文件包含一系列宏定义，用来裁剪RT-Thread，配置内核和组件参数。RT-Thread推出了ENV工具，提供了类似Linux内核裁剪配置的图形化工具，因此一般不需要手动修改rtconfig.h文件。
 
 ## 内核部分 ##
 
