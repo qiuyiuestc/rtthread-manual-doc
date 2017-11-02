@@ -1333,12 +1333,12 @@ void device_thread_entry(void* parameter)
 int rt_application_init()
 {
 	/* 创建devt线程*/
-	rt_thread_t thread = rt_thread_create("devt",
+	rt_thread_t tid = rt_thread_create("devt",
 		device_thread_entry, RT_NULL,
 		1024, 25, 7);
 	/* 创建成功则启动线程*/
-	if (thread_!= RT_NULL)
-		rt_thread_startup(&thread);
+	if (tid!= RT_NULL)
+		rt_thread_startup(tid);
 }
 ~~~
 
