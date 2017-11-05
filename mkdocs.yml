@@ -29,11 +29,11 @@ pages:
   - 入门教程:
     - 'RT-Thread新手入门': 'docs/tutorials/quickstart.md'
     - 'RT-Thread编程风格': 'docs/tutorials/codingstyle.md'
-    - 'RT-Thread许可证' : 'docs/tutorials/license.md'    
+    - 'RT-Thread许可证' : 'docs/tutorials/license.md'
     - '为RT-Thread贡献代码': 'zh/9appendix/03_github.md'
-  - 进阶教程:
-    - 'RT-Thread进阶': 'docs/tutorials/advanced.md'
-    - '配置选项参考说明': 'docs/tutorials/rtconfig.md'
+    - 'rtconfig配置选项参考': 'docs/tutorials/rtconfig.md'
+#  - 进阶教程:
+#    - 'RT-Thread进阶': 'docs/tutorials/advanced.md'
 #  - 高级教程:
 #    - 'RT-Thread高级': 'docs/tutorials/senior.md'
 #    - 'SCons构建系统': 'zh/1chapters/10-chapter_scons.md'
@@ -45,6 +45,7 @@ pages:
 #    - '致谢': 'zh/0preface/00-chapter3-acknowledgement.md'    
 - 用户手册:
   - RT-Thread编程手册: 
+    - '前言': 'zh/0preface/00-chapter1-preface.md'  
 #    - '简介': 'zh/1chapters/01-chapter_introduction.md'
     - '线程调度与管理': 'zh/1chapters/02-chapter_thread.md'
     - '定时器': 'zh/1chapters/03-chapter_timer.md'
@@ -64,8 +65,8 @@ pages:
 #  - 'RT-Thread设备和驱动手册': 'zh/1chapters/07-chapter_exception.md'  
 #  - 'RT-Thread移植手册':
 #    - '移植': 'zh/1chapters/09-chapter_porting.md'
-#  - 'RT-Thread工具手册':
-#    - 'ENV工具手册': 'zh/1chapters/09-chapter_porting.md'
+  - 'RT-Thread工具手册':
+    - 'RT-Thread ENV工具手册': 'zh/5chapters/01-chapter_env_manual.md'
 
 - 应用笔记:
 #  - 移植说明:
@@ -73,7 +74,7 @@ pages:
 #    - 'C-SKY架构芯片移植说明': 'docs/applicationnote/c-sky.md'
   - 开发板说明:
     - '正点原子板Nano入门环境搭建': 'docs/applicationnote/apollo_nano_start.md'
-    - '正点原子板IoT进阶环境搭建': 'docs/applicationnote/apollo_advanced.md'
+    - '正点原子板IoT入门环境搭建': 'docs/applicationnote/apollo_advanced.md'
 #    - '[正点原子板]RT-Thread实验手册': 'docs/applicationnote/rtt_experiment.md'
 #    - '[QEMU模拟器]IoT进阶环境搭建': 'docs/applicationnote/qemu_iot_advanced.md'
 #  - 学习笔记:
