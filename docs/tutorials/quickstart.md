@@ -5,13 +5,14 @@ RT-Thread入门指南主要是针对RT-Thread初学者。
 * 有RTOS学习经验的开发者可以选择RT-Thread IoT入门，这是进入RT-Thread全功能版的大门。
 
 ## 学习环境 ##
-* [正点原子开发板](http://#)
+* [正点原子开发板](http://www.rt-thread.org/product/119.html)
 
 ## RT-Thread Nano环境搭建 ##
 * [基于正点原子开发板的RT-Thread Nano快速入门环境搭建](../applicationnote/apollo_nano_start.md)
 
 ## RT-Thread IoT环境搭建 ##
 <!-- * [基于正点原子开发板的RT-Thread IoT快速入门环境搭建](../applicationnote/apollo_advanced.md) -->
+* 赶工中，近期上线
 
 <!-- 
 ## 实验手册
