@@ -11,7 +11,7 @@ RT-Thread入门指南主要是针对RT-Thread初学者。
 * [基于正点原子开发板的RT-Thread Nano快速入门环境搭建](../applicationnote/apollo_nano_start.md)
 
 ## RT-Thread IoT环境搭建 ##
-* [基于正点原子开发板的RT-Thread IoT快速入门环境搭建](../applicationnote/apollo_advanced.md)
+<!-- * [基于正点原子开发板的RT-Thread IoT快速入门环境搭建](../applicationnote/apollo_advanced.md) -->
 
 <!-- 
 ## 实验手册
@@ -23,9 +23,10 @@ RT-Thread入门指南主要是针对RT-Thread初学者。
 
 ## 参考手册 ##
 * [RT-Thread编程手册](../../zh/1chapters/02-chapter_thread.md)
-* [RT-Thread内核API手册](http://#)
+<!-- * [RT-Thread内核API手册](http://#)-->
 * [RT-Thread编程风格](../tutorials/codingstyle.md)
 * [RT-Thread ENV工具手册](../../zh/5chapters/01-chapter_env_manual.md)
+* [Scons构建系统](../../zh/1chapters/10-chapter_scons.md)
 * [RT-Thread配置选项参考说明](rtconfig.md)
 * [RT-Thread许可证](../tutorials/license.md)
 * [为RT-Thread贡献代码](../../zh/9appendix/03_github.md)

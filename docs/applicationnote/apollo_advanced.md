@@ -6,7 +6,7 @@
 
 * 下载 [RT-Thread 源码](https://github.com/RT-Thread/rt-thread)
 * 参考[RT-Thread ENV工具手册](../../zh/5chapters/01-chapter_env_manual.md)
-* 正点原子STM32F429阿波罗开发板
+* 正点原子开发板
 
 ## 2.配置方法 ##
 
