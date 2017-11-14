@@ -141,7 +141,7 @@ RT-Thread还有一大亮点是支持POSIX接口标准，提高了应用程序的
 <center> 图21 modbus配置</center >
 
 <table><tr><td bgcolor=Yellow>在线组件包</td></tr></table>
-RT-Thread支持在线组件包安装，即从RT-Thread下载所需的软件包到本地，包括轻量级数据库、IoT相关协议、脚本支持、日志记录和Cortex-M错误诊断工具等。
+RT-Thread支持在线组件包安装，即从RT-Thread下载所需的软件包到本地，包括轻量级数据库、IoT相关协议、脚本语言支持、日志记录和Cortex-M错误诊断工具等。
 
 <center> ![image](../../figures/lpc54608-22.png) </center >  
 <center> 图22 在线组件包</center >
