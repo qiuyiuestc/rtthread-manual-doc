@@ -74,6 +74,7 @@ pages:
   - 开发板说明:
     - '正点原子板Nano入门环境搭建': 'docs/applicationnote/apollo_nano_start.md'
     - '正点原子板IoT进阶环境搭建': 'docs/applicationnote/apollo_advanced.md'
+    - 'LPC54608 IoT环境搭建': 'docs/applicationnote/lpc546x_advance.md'
 #    - '[正点原子板]RT-Thread实验手册': 'docs/applicationnote/rtt_experiment.md'
 #    - '[QEMU模拟器]IoT进阶环境搭建': 'docs/applicationnote/qemu_iot_advanced.md'
 #  - 学习笔记:
