@@ -1,6 +1,5 @@
 # RT-Thread Nano发布说明 #
 
-### 从裸机开始，创建一个RT-Thread Nano系统工程 ###
 RT-Thread Nano是一个精炼的硬实时内核，支持多任务处理、软件定时器、信号量、邮箱和实时调度等相对完整的实时操作系统特性，用户可以直接从MDK的Run-time Environment获取，可以使用shell高效地进行在线动态调试。
 在支持semaphore和mailbox特性，并运行两个线程(main线程+idle线程)情况下，ROM和RAM依然保持着极小的尺寸。我们基于Cortex M0 MCU的一个例子，编译后的大小(ROM: 3.25K, RAM: 1.04K)，除去MCU需要的ROM和RAM， RT-Thread Nano本身需要的ROM是2.5K , RAM 是1K。
 
@@ -8,7 +7,7 @@ RT-Thread Nano是一个精炼的硬实时内核，支持多任务处理、软件
 <center>图1 RT-Thread Nano内存占用情况 </center>
 
 接下来将描述如何在MDK5上基于RTE(Run-Time Environment)， 从裸机开始，创建一个RT-Thread RTOS的小系统工程。
-###01 Pack安装###
+## 1. Pack安装 ##
 Pack可以通过MDK联网安装，也可以离线安装。下面开始介绍两种安装方式。
 
 - Pack Installer安装
@@ -30,7 +29,7 @@ Pack可以通过MDK联网安装，也可以离线安装。下面开始介绍两�
 <center>![image](../../figures/packs-install-man.png)</center>
 <center>图3 Packs手动安装</center>
 
-###02 基础工程准备###
+## 2. 基础工程准备 ##
 
 在开始创建RT-Thread小系统之前，我们需要准备一个能正常运行的裸机工程。作为示例，这边使用的是基于STM32L072-Discovery 和Low-Level Library的一个LED 闪烁程序。程序的主要截图如下：
 
@@ -39,7 +38,7 @@ Pack可以通过MDK联网安装，也可以离线安装。下面开始介绍两�
 
 在我们的例程中，编译下载程序后，就可以看到3个LED交替闪烁了。读者可以根据自己的需要使用其他芯片，完成一个简单的类似裸机工程。
 
-###03 添加RT-Thread到工程###
+## 3. 添加RT-Thread到工程 ##
 
 基于一个可以运行的裸机程序，我们来添加RT-Thread到工程。如下图，点击Manage Run-Time Environment。
 
@@ -56,15 +55,15 @@ Pack可以通过MDK联网安装，也可以离线安装。下面开始介绍两�
 <center>![image](../../figures/3-3.jpg)</center>
 <center>图7 添加了RTOS的工程</center>
 
-###04 适配RT-Thread###
+## 4. 适配RT-Thread ##
 
 在board.c完成systick的配置。以STM32L072为例，需要添加以下代码：
 
-1. 包含相应的头文件
+1). 包含相应的头文件
 
-2. 初始化Systick：根据系统频率和每秒tick数量，配置Systick
+2). 初始化Systick：根据系统频率和每秒tick数量，配置Systick
 
-3. 在Systick中断处理函数里添加`rt_tick_increase()`函数
+3). 在Systick中断处理函数里添加`rt_tick_increase()`函数
 
 <center>![image](../../figures/3-4.jpg)</center>
 <center>图8 配置systick</center>
@@ -73,9 +72,9 @@ Pack可以通过MDK联网安装，也可以离线安装。下面开始介绍两�
 
 最后替换掉上面例程的`delay`函数：
 
-1. 包含RT-Thread的相关头文件`<rtthread.h>`
+1). 包含RT-Thread的相关头文件`<rtthread.h>`
 
-2. 将`delay()`函数替换成`rt_thread_delay(RT_TICK_PER_SECOND)`
+2). 将`delay()`函数替换成`rt_thread_delay(RT_TICK_PER_SECOND)`
 
 下面是完成修改的代码：
 
@@ -84,7 +83,7 @@ Pack可以通过MDK联网安装，也可以离线安装。下面开始介绍两�
 
 编译程序之后下载到芯片就可以看到基于RT-Thread的程序运行起来了。
 
-###04 更多例程###
+## 5. 更多例程 ##
 
 更多参看例程可以在MDK上通过Pack Installer找到。点击Pack Installer图标：
 

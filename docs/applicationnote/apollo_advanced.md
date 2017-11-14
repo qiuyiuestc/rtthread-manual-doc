@@ -1,14 +1,18 @@
-#  [正点原子板]IoT进阶环境搭建
-本节以正点原子STM32F429阿波罗开发板为例，说明了如何使用ENV软件包管理工具来配置RT-Thread内核参数、组件、生成Keil MDK工程。
+#  基于正点原子板的RT-Thread IoT入门环境搭建 #
+
+本节以正点原子STM32F429阿波罗开发板为例，说明了如何使用[RT-Thread ENV工具](../../zh/5chapters/01-chapter_env_manual.md)来配置RT-Thread内核参数、组件、生成Keil MDK工程。
+
 ## 1.准备工作
 
-* 参考`RT-Thread 软件包环境`章节
-* 正点原子STM32F29阿波罗发板
+* 下载 [RT-Thread 源码](https://github.com/RT-Thread/rt-thread)
+* 参考[RT-Thread ENV工具手册](../../zh/5chapters/01-chapter_env_manual.md)
+* 正点原子开发板
 
-## 2.配置方法
-menuconfig工具支持对内核、组件、在线软件包、BSP 4大部分进行裁剪和参数配置。
+## 2.配置方法 ##
 
-#### 内核配置
+menuconfig工具支持对内核、组件、在线软件包、驱动进行裁剪和参数配置。
+
+### 内核配置 ###
 
 在\bsp\stm32f429-apollo目录中使用`menuconfig`命令开始进行项目配置，`menuconfig`界面如下图：
 
@@ -32,7 +36,7 @@ menuconfig工具支持对内核、组件、在线软件包、BSP 4大部分进�
 
 可以看到已经修改好了。这些参数其实就是RT-Thread配置文件rtconfig.h里面的，其它参数的修改类似，实际中根据需要修改即可，即可达到裁剪、配置内核的目的。
 
-#### 组件配置
+### 组件配置 ###
 
 选中`RT-Thread Components`进入组件配置菜单：
 
@@ -42,7 +46,7 @@ menuconfig工具支持对内核、组件、在线软件包、BSP 4大部分进�
 
 ![image](./figures/config-components2.png)
 
-![image](./figures/config-components3.png)
+![image](./figures/config-components3.PNG)
 
 ![image](./figures/config-components4.png)
 
@@ -54,7 +58,7 @@ menuconfig工具支持对内核、组件、在线软件包、BSP 4大部分进�
 
 ![image](./figures/config-components7.png)
 
-#### 在线组件包
+### 在线组件包 ###
 
 RT-Thread支持在线组件包安装，即从RT-Thread下载所需的软件包到本地，包括轻量级数据库、IoT相关协议、JS脚本支持、音频、日志记录和Cortex-M错误诊断工具等。
 
@@ -66,9 +70,9 @@ RT-Thread支持在线组件包安装，即从RT-Thread下载所需的软件包�
 
 ![image](./figures/config-components12.PNG)
 
-## 3.编译RT-Thread
+## 3.生成MDK工程 ##
 
-使用命令`scons`完成基本的编译，输入`scons --target=mdk5 -s`即可自动在设备目录下生成keil mdk5工程，工程名为project。
+输入`scons --target=mdk5 -s`即可自动在设备目录下生成keil mdk5工程，工程名为project。
 
 或者输入`scons --target=mdk4 -s`生成的是keil mdk4工程。
 
