@@ -1,6 +1,6 @@
 #  RT-Thread配置选项说明 #
 
-RT-thread包含一个rtconfig.h文件，该文件包含一系列宏定义，用来裁剪RT-Thread，配置内核和组件参数。RT-Thread推出了ENV工具，提供了类似Linux内核裁剪配置的图形化工具，因此一般不需要手动修改rtconfig.h文件。
+RT-Thread包含一个rtconfig.h文件，该文件包含一系列宏定义，用来裁剪RT-Thread，配置内核和组件参数。RT-Thread推出了ENV工具，提供了类似Linux内核裁剪配置的图形化工具，因此一般不需要手动修改rtconfig.h文件。
 
 ## 内核部分 ##
 
@@ -29,8 +29,8 @@ RT-thread包含一个rtconfig.h文件，该文件包含一系列宏定义，用�
 |RT_CONSOLEBUF_SIZE|终端缓存大小| 
 |RT_CONSOLE_DEVICE_NAME|终端设备名字| 
 |RT_USING_COMPONENTS_INIT|使能组件初始化|
-|RT_USING_FINSH|使能fish组件|
-|FINSH_USING_HISTORY|使能fishi历史记录|
+|RT_USING_FINSH|使能finsh组件|
+|FINSH_USING_HISTORY|使能finsh历史记录|
 |FINSH_USING_SYMTAB|使能tab键补全命令|
 |FINSH_USING_DESCRIPTION|使能命令描述|
 |FINSH_THREAD_PRIORITY|fish线程优先级|
