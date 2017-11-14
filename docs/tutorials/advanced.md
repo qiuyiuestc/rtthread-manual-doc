@@ -36,5 +36,4 @@ RT-Thread进阶指南主要是针对有RTOS开发经验的开发者，使大家�
 <!-- * [RT-Thread组件手册](http://#) -->
 * [RT-Thread配置选项参考说明](rtconfig.md)
 * [RT-Thread编程风格](../tutorials/codingstyle.md)
-* [RT-Thread许可证](../tutorials/license.md)
 * [为RT-Thread贡献代码](../../zh/9appendix/03_github.md)

@@ -6,6 +6,7 @@ RT-Thread入门指南主要是针对RT-Thread初学者。
 
 ## 学习环境 ##
 * [正点原子开发板](http://www.rt-thread.org/product/119.html)
+<center> ![image](./figures/407.jpg) </center >
 
 ## RT-Thread Nano环境搭建 ##
 * [基于正点原子开发板的RT-Thread Nano快速入门环境搭建](../applicationnote/apollo_nano_start.md)
@@ -20,7 +21,8 @@ RT-Thread入门指南主要是针对RT-Thread初学者。
 -->
 
 ## 实验例程 ##
-* [正点原子开发板的RT-Thread例程](http://pan.baidu.com/s/1sl4sWjj)
+* [基于正点原子探索者STM32F407的全套内核例程，一共18个经典例程](https://pan.baidu.com/s/1bpjiw7X)
+<center> ![image](./figures/examples.jpg) </center >
 
 ## 参考手册 ##
 * [RT-Thread编程手册](../../zh/1chapters/02-chapter_thread.md)
@@ -29,5 +31,4 @@ RT-Thread入门指南主要是针对RT-Thread初学者。
 * [RT-Thread ENV工具手册](../../zh/5chapters/01-chapter_env_manual.md)
 * [Scons构建系统](../../zh/1chapters/10-chapter_scons.md)
 * [RT-Thread配置选项参考说明](rtconfig.md)
-* [RT-Thread许可证](../tutorials/license.md)
 * [为RT-Thread贡献代码](../../zh/9appendix/03_github.md)

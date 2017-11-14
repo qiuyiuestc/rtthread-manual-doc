@@ -29,9 +29,8 @@ pages:
   - 入门教程:
     - 'RT-Thread新手入门': 'docs/tutorials/quickstart.md'
     - 'RT-Thread编程风格': 'docs/tutorials/codingstyle.md'
-    - 'RT-Thread许可证' : 'docs/tutorials/license.md'
     - '为RT-Thread贡献代码': 'zh/9appendix/03_github.md'
-    - 'rtconfig配置选项参考': 'docs/tutorials/rtconfig.md'
+    - 'RT-Thread配置选项参考': 'docs/tutorials/rtconfig.md'
 #  - 进阶教程:
 #    - 'RT-Thread进阶': 'docs/tutorials/advanced.md'
 #  - 高级教程:
@@ -61,7 +60,7 @@ pages:
 #  - 'RT-Thread API手册': 'zh/1chapters/07-chapter_exception.md'
 #  - 'RT-Thread组件手册':
 #    - '图像用户界面引擎': 'zh/1chapters/16-chapter_gui_engine.md'
-#  - 'RT-Thread设备和驱动手册': 'zh/1chapters/07-chapter_exception.md'
+#  - 'RT-Thread设备和驱动手册': 'zh/1chapters/07-chapter_exception.md'  
 #  - 'RT-Thread移植手册':
 #    - '移植': 'zh/1chapters/09-chapter_porting.md'
   - 'RT-Thread工具手册':
