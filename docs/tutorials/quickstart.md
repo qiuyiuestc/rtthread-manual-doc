@@ -21,7 +21,7 @@ RT-Thread入门指南主要是针对RT-Thread初学者。
 -->
 
 ## 实验例程 ##
-* [基于正点原子探索者STM32F407的全套内核例程，一共18个经典例程](https://pan.baidu.com/s/1bpjiw7X)
+* [基于正点原子探索者STM32F407的全套内核例程，一共18个经典例程](https://pan.baidu.com/s/1gfxoxNX)
 <center> ![image](./figures/examples.jpg) </center >
 
 ## 参考手册 ##
