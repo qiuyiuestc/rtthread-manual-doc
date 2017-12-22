@@ -31,6 +31,7 @@ pages:
     - 'RT-Thread编程风格': 'docs/tutorials/codingstyle.md'
     - '为RT-Thread贡献代码': 'zh/9appendix/03_github.md'
     - 'RT-Thread配置选项参考': 'docs/tutorials/rtconfig.md'
+    - 'PDF手册下载': 'docs/tutorials/download.md'
 #  - 进阶教程:
 #    - 'RT-Thread进阶': 'docs/tutorials/advanced.md'
 #  - 高级教程:
