@@ -72,6 +72,7 @@ pages:
 #  - 移植说明:
 #    - 'Risc-V架构芯片移植说明': 'docs/applicationnote/risc-v.md'
 #    - 'C-SKY架构芯片移植说明': 'docs/applicationnote/c-sky.md'
+  - 'AN0001：Serial设备应用笔记': 'docs/applicationnote/an0001_uart.md'
   - 开发板说明:
     - '正点原子板Nano入门环境搭建': 'docs/applicationnote/apollo_nano_start.md'
 #    - '正点原子板IoT入门环境搭建': 'docs/applicationnote/apollo_advanced.md'

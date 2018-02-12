@@ -2,6 +2,7 @@
 
 本应用笔记描述了如何使用RT-Thread的串口设备，包括串口配置、设备操作接口的应用。并给出了在正点原子STM32F4探索者开发板上验证的代码示例。
 
+
 ## 1 本文的目的和结构 ##
 
 
@@ -17,7 +18,7 @@
 
 RT-Thread提供了一套简单的I/O设备管理框架，它把I/O设备分成了三层进行处理：应用层、I/O设备管理层、硬件驱动层。应用程序通过RT-Thread的设备操作接口获得正确的设备驱动，然后通过这个设备驱动与底层I/O硬件设备进行数据（或控制）交互。RT-Thread提供给上层应用的是一个抽象的设备操作接口，给下层设备提供的是底层驱动框架。
 
-<center>![image](./figures/an0001_1.png)</center>
+<center>![image](figures/an0001_1.png)</center>
 <center>图1 RT-Thread设备管理框架</center>
 
 那么用户如何使用设备操作接口开发出跨平台的串口应用代码呢？
@@ -27,7 +28,7 @@ RT-Thread提供了一套简单的I/O设备管理框架，它把I/O设备分成�
 本文基于正点原子STM32F4探索者开发板，给出了串口的配置流程和应用代码示例。由于RT-Thread设备操作接口的通用性，因此这些代码与硬件平台无关，读者可以直接将它用在自己使用的硬件平台上。
 正点原子STM32F4探索者开发板使用的是STM32F407ZET6，具有多路串口。我们使用串口1作为shell终端，串口2作为实验用串口，测试数据收发。终端软件使用putty。板载串口1带有USB转串口芯片，因此使用USB 线连接串口1和PC即可；串口2则需要使用USB转串口模块连接到PC。
 
-<center>![image](./figures/an0001_2.png)</center>
+<center>![image](figures/an0001_2.png)</center>
 <center>图2 实验使用的正点原子STM32F4探索者</center>
 
 ### 3.1 准备和配置工程 ###
@@ -40,27 +41,27 @@ RT-Thread提供了一套简单的I/O设备管理框架，它把I/O设备分成�
 
 (2) 勾选Using UART1、Using UART2，选择芯片型号为STM32F407ZE，时钟源为外部8MHz，如图所示：
 
-<center>![image](./figures/an0001_3.png)</center>
+<center>![image](figures/an0001_3.png)</center>
 <center>图3 使用menuconfig配置串口</center>
 
 3.输入命令scons --target=mdk5 -s生成keil工程，打开工程后先修改MCU型号为STM32F407ZETx，如图所示：
 
-<center>![image](./figures/an0001_4.png)</center>
+<center>![image](figures/an0001_4.png)</center>
 <center>图4 检查芯片型号</center>
 
 4.打开putty，选择正确的串口，软件参数配置为115200-8-1-N、无流控。如图所示：
 
-<center>![image](./figures/an0001_5.png)</center>
+<center>![image](figures/an0001_5.png)</center>
 <center>图5 putty配置</center>
 
 5.编译、下载程序，按下复位后就可以在串口1连接的终端上看到RT-Thread标志log了，输入list_device命令能查看到uart1、uart2 Character Device就表示串口配置好了。
 
-<center>![image](./figures/an0001_6.png)</center>
+<center>![image](figures/an0001_6.png)</center>
 <center>图6 使用list_device命令查看uart设备</center>
 
 ### 3.2 加入串口相关代码 ###
 
-<center>![image](./figures/an0001_7.png)</center>
+<center>![image](figures/an0001_7.png)</center>
 <center>图7 添加本文提供的文件到工程</center>
 
 本应用笔记附带代码app_uart.c、app_uart.h，app_uart.c中是串口相关操作的代码，方便阅读。app_uart.c中提供了4个函数uart_open、uart_putchar、uart_putstring、uart_getchar 以方便使用串口。app_uart.c中的代码与硬件平台无关，读者可以把它直接添加到自己的工程。利用这几个函数在main.c中编写测试代码。
@@ -125,12 +126,12 @@ int main(void)
 
 ### 3.3 运行结果 ###
 
-编译、将代码下载到板卡，复位，串口2连接的串口调试助手sscom（软件参数配置为115200-8-1-N、无流控）输出了字符2、0、1、8和字符串Hello RT-Thread!。使用sscom发送字符 ‘A’，串口2接收到将其错位后输出。实验现象如图所示：
+编译、将代码下载到板卡，复位，串口2连接的终端软件putty（软件参数配置为115200-8-1-N、无流控）输出了字符2、0、1、8和字符串Hello RT-Thread!。输入字符 ‘A’，串口2接收到将其错位后输出。实验现象如图所示：
 
-<center>![image](./figures/an0001_8.png)</center>
+<center>![image](figures/an0001_8.png)</center>
 <center>图8 实验现象</center>
 
-> 图中sscom连接开发板的串口2作为测试串口。
+> 图中putty连接开发板的串口2作为测试串口。
 
 ## 4 进阶阅读 ##
 
@@ -177,7 +178,7 @@ rt_err_t uart_open(const char *name)
 ```
 简要流程如下：
 
-<center>![image](./figures/an0001_9.png)</center>
+<center>![image](figures/an0001_9.png)</center>
 <center>图9 uart_open函数流程图</center>
 
 uart_open函数使用到的设备操作接口有：rt_device_find、rt_device_set_rx_indicate、rt_device_open。
@@ -215,7 +216,7 @@ void uart_putchar(const rt_uint8_t c)
 ```
 调用uart_putchar发生的数据流向示意图如下： 
 
-<center>![image](./figures/an0001_10.png)</center>
+<center>![image](figures/an0001_10.png)</center>
 <center>图10 uart_putchar数据流</center>
 
 应用程序调用uart_putchar时，实际调用关系为：rt_device_write ==> rt_serial_write ==> drv_putc，最终数据通过串口数据寄存器发送出去。
@@ -256,7 +257,7 @@ rt_uint8_t uart_getchar(void)
 uart_getchar函数内部有一个while()循环，先调用rt_device_read去读取一字节数据，没有读到则调用rt_event_recv等待事件标志，挂起调用线程；串口接收到一字节数据后产生中断，调用回调函数uart_intput，回调函数里面调用了rt_event_send发送事件标志以唤醒等待该event事件的线程。
 调用uart_getchar函数发生的数据流向示意图如下：
 
-<center>![image](./figures/an0001_11.png)</center>
+<center>![image](figures/an0001_11.png)</center>
 <center>图11 uart_getchar数据流</center>
 
 应用程序调用uart_getchar时，实际调用关系为：rt_device_read ==> rt_serial_read ==> drv_getc，最终从串口数据寄存器读取到数据。
@@ -266,7 +267,7 @@ uart_getchar函数内部有一个while()循环，先调用rt_device_read去读�
  RT-Thread自动初始化功能依次调用hw_usart_init ==> rt_hw_serial_register ==> rt_device_register完成
 了串口硬件初始化，从而将设备操作接口和串口驱动联系起来，我们就可以使用设备操作接口来对串口进行操作。
 
-<center>![image](./figures/an0001_12.png)</center>
+<center>![image](figures/an0001_12.png)</center>
 <center>图12 串口驱动和设备管理框架联系</center>
 
 更多关于I/O设备管理框架的说明和串口驱动实现细节，请参考《RT-Thread编程手册》**第 6 章
@@ -468,4 +469,14 @@ size。pos根据不同的设备类别存在不同的意义。
 
 ### 5.3 RT-Thread参考文献 ###
 
-[rt-thread编程指南](https://www.rt-thread.org/document/site/zh/0preface/00-chapter1-preface/) 
+[RT-Thread编程指南](https://www.rt-thread.org/document/site/zh/0preface/00-chapter1-preface/)
+
+### 5.4 PDF版本和代码下载 ###
+
+本文档PDF版本和配套代码，请关注微信公众号：RTThread，回复关键字：『应用笔记』获取
+
+扫一扫关注RT-Thread微信公众号
+
+<center>![image](figures/weixin.png)</center>
+<center>图13 RT-Thread微信公众号</center>
+
